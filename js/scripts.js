@@ -1,3 +1,7 @@
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
+
 $(function () {
     $(".carousel").carousel({ interval: 2000 });
     $("#carouselButton").click(function () {
@@ -12,3 +16,13 @@ $(function () {
         }
     });
 });
+
+$(document).ready(function () {
+    $("#reserveButton").click(function() {
+        $("#reserveModal").modal();
+    });
+
+    $("#loginButton").click(function() {
+        $("#loginModal").modal();
+    });
+})
